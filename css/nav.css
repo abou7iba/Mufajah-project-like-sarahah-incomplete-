@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #1a508b;
+    /* color: #e84545; */
+    font-family: 'Changa', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+nav{
+    height: 50px;
+    background: #1a508b;
+}
+nav h1{
+    position: absolute;
+    width: 200px;
+    top: 8px;
+    right: 30px;
+    /* left: -90px; */
+    color: #fff;
+    text-transform: uppercase;
+}
+nav ul{
+    float: left;
+    /* margin-left: 50px; */
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin:0 15px;
+}
+nav ul li a{
+    position: relative;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+label #sign-one,
+label #sign-two {
+    font-size: 30px;
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    display: none;
+}
+#res-menu{
+    display: none;
+}
+input #inptocopy{
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 870px){
+    label #sign-one{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #02475e;
+        top: 50px;
+        right: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 10;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 20px;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #res-menu:checked ~ul{
+        right: 0;
+    }
+    #res-menu:checked ~ label #sign-one{
+        display: none;
+    }   
+    #res-menu:checked ~ label #sign-two{
+        display: block;
+    } 
+}
